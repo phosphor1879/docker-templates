@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>newznab</Name>
+  <Repository>fekhoo/newznab:latest</Repository>
+  <Registry>https://hub.docker.com/r/fekhoo/Newznab-Docker/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/???/</Support>
+  <Project>https://github.com/fekhoo/Newznab-Docker</Project>
+  <Overview>newznab is a usenet indexing application, that makes building a usenet community easy. http://www.newznab.com/</Overview>
+  <Category>Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/homer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/icons/homer.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A dead simple static HOMe for your servER to keep your services on hand from a simple yaml config.[br][br]Download config.yml[/br][/br]wget -O /mnt/user/appdata/homer/config.yml https://raw.githubusercontent.com/bastienwirtz/homer/master/config.yml</Description>
+  <Labels/>
+  <Config Name="Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Covers Path" Target="/var/www/newznab/www/covers" Default="" Mode="rw" Description="Where to put covers" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/newznab/covers/</Config>
+  <Config Name="Nzbfiles Path" Target="/var/www/newznab/nzbfiles" Default="" Mode="rw" Description="Where to put nzb files" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/newznab/nzbfiles/</Config>
+  <Config Name="Timezone" Target="TZ" Default="America/Los_Angeles" Mode="" Description="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" Type="Variable" Display="always" Required="true" Mask="false">America/Los_Angeles</Config>
+  <Config Name="NNUSER" Target="NNUSER" Default="svnuser" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">svnuser</Config>
+  <Config Name="NNPASS" Target="NNPASS" Default="svnpw" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">svnpw</Config>
+  <Config Name="DB_TYPE" Target="DB_TYPE" Default="mysql" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">mysql</Config>
+  <Config Name="DB_HOST" Target="DB_HOST" Default="mysql" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">mysql</Config>
+  <Config Name="DB_PORT" Target="DB_PORT" Default="3306" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="DB_USER" Target="DB_USER" Default="newznab" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">newznab</Config>
+  <Config Name="DB_PASSWORD" Target="DB_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">my-secret-pw</Config>
+  <Config Name="DB_NAME" Target="DB_NAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">newznab</Config>
+  <Config Name="NNTP_USERNAME" Target="NNTP_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">nnuser</Config>
+  <Config Name="NNTP_PASSWORD" Target="NNTP_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">npw</Config>
+  <Config Name="NNTP_SERVER" Target="NNTP_SERVER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">server.com</Config>
+  <Config Name="NNTP_PORT" Target="NNTP_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">569</Config>
+  <Config Name="NNTP_SSLENABLED" Target="NNTP_SSLENABLED" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+</Container>
