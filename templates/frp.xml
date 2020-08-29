@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>frp</Name>
-  <Repository>snowdreamtech/frpc:latest</Repository>
-  <Registry>https://hub.docker.com/r/snowdreamtech/frpc/</Registry>
+  <Name>frpc</Name>
+  <Repository>keyvanfatehi/frpc:latest</Repository>
+  <Registry>https://hub.docker.com/repository/docker/keyvanfatehi/frpc</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -18,5 +18,5 @@
   <DonateLink/>
   <Description>frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall to the Internet. As of now, it supports TCP and UDP, as well as HTTP and HTTPS protocols, where requests can be forwarded to internal services by domain name.</Description>
   <Labels/>
-  <Config Name="Config Path" Target="/etc/frp" Default="" Mode="ro" Description="Container Path: /etc/frp" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/frp</Config>
+  <Config Name="Config Path" Target="/etc/frp/frpc.ini" Default="" Mode="ro" Description="Container Path: /etc/frp" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/frp</Config>
 </Container>
